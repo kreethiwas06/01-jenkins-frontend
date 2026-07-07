@@ -2,15 +2,15 @@ pipeline {
     agent any
     
     environment{
-        S3_BUCKET=         frontend-demo-proj
-        DISTRIBUTION_ID=   E1Y8SQ50DEXOL8
+        S3_BUCKET=         "my-0t766877"
+        DISTRIBUTION_ID=   "E345SD1AR5ZC2K"
     }
     stages {
         stage('gitclone'){
             steps {
-                git branch: 'master'
-                git credentialsId: 'keypem',
-                url: 'https://github.com/kreethiwas06/sample-devops-frontend-project.git'
+                git branch: 'main'
+                git credentialsId: 'kreethiwas06',
+                url: 'https://github.com/kreethiwas06/01-jenkins-frontend.git'
             }
         }
         stage('install dependencies'){
