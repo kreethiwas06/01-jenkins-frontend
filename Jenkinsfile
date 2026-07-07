@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        stage('create cloudfront invalidation'){
+        stage('cloudfront create-invalidation'){
             steps {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'access key secret key', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                     sh'''
