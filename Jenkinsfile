@@ -7,10 +7,7 @@ pipeline {
     }
     stages {
         stage('gitclone'){
-            steps {
-                git branch: 'main'
-                git credentialsId: 'kreethiwas06',
-                url: 'https://github.com/kreethiwas06/01-jenkins-frontend.git'
+            steps {git branch: 'main', credentialsId: 'kreethiwas06', url: 'https://github.com/kreethiwas06/01-jenkins-frontend.git'
             }
         }
         stage('install dependencies'){
