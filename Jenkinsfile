@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment{
-        S3_BUCKET=         "my-0t766877"
-        DISTRIBUTION_ID=   "E345SD1AR5ZC2K"
+        S3_BUCKET=         "kiaq-07"
+        DISTRIBUTION_ID=   "E13WLMS0BOD6PP"
     }
     stages {
         stage('gitclone'){
