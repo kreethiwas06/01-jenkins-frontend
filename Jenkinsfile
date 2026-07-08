@@ -34,7 +34,7 @@ pipeline {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'access key Secret key', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                     sh'''
                     /usr/local/bin/aws cloufront create-invalidation \
-                    --disribution-id${'DISTRIBUTION_ID} \
+                    --disribution-id ${'DISTRIBUTION_ID} \
                     --paths "/*"
                     '''
                 }
