@@ -33,7 +33,7 @@ pipeline {
             steps {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'access key Secret key', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                     sh'''
-                    /usr/local/bin/aws cloufront create-invalidation \
+                    /usr/local/bin/aws cloudfront create-invalidation \
                     --distribution-id ${'DISTRIBUTION_ID} \
                     --paths "/*"
                     '''
