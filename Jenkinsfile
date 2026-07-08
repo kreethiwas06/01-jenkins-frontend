@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment{
-        S3_BUCKET=         "kiaq-07"
-        DISTRIBUTION_ID=   "EVD1RH1OM12XN"
+        S3_BUCKET       =   "kiaq-07"
+        DISTRIBUTION_ID =   "EVD1RH1OM12XN"
     }
     stages {
         stage('gitclone'){
@@ -34,7 +34,7 @@ pipeline {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'access key Secret key', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                     sh'''
                     /usr/local/bin/aws cloudfront create-invalidation \
-                    --distribution-id ${'DISTRIBUTION_ID'} \
+                    --distribution-id ${DISTRIBUTION_ID} \
                     --paths "/*"
                     '''
                 }
