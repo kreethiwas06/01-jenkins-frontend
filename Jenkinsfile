@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build static files'){
             steps {
-                sh 'run npm build'
+                sh 'npm run build'
             }
         }
         stage('s3 bucket'){
