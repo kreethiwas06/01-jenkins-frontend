@@ -24,7 +24,7 @@ pipeline {
             steps {
                 withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'access key Secret key', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')])  {
                     sh'''
-                    /usr/local/bin/aws s3 sync out/s3://${S3_BUCKET} --delete
+                    /usr/local/bin/aws s3 sync out/ s3://${S3_BUCKET} --delete
                     '''
                 }
             }
