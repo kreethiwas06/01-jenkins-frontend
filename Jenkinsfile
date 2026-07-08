@@ -3,7 +3,7 @@ pipeline {
     
     environment{
         S3_BUCKET=         "kiaq-07"
-        DISTRIBUTION_ID=   "E13WLMS0BOD6PP"
+        DISTRIBUTION_ID=   "EVD1RH1OM12XN"
     }
     stages {
         stage('gitclone'){
